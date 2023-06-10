@@ -8,18 +8,16 @@ type SwitchProps = {
 export function Switch({ services, onCheck }: SwitchProps) {
   return (
     <section className="hide-password-container">
-      <span className='switch-heading'>Esconder senhas</span>
       {services.length > 0 ? (
-        <label htmlFor="hide-password" className="switch">
+          <><span className='switch-heading'>Esconder senhas</span><label htmlFor="hide-password" className="switch">
           <input
             type="checkbox"
             name="hide-password"
             id="hide-password"
             onChange={onCheck}
-            className="switch-checkbox peer"
-          />
+            className="switch-checkbox peer" />
           <span className="slider peer-checked:bg-emerald-400 peer-checked:left-9 " />
-        </label>
+        </label></>
       ) : (
         <span className="span-hide" />
       )}
