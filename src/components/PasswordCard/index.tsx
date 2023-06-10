@@ -32,12 +32,11 @@ export function PasswordCard({
       </a>
       <p className="login-info">
         Login
-        <span className='login-info-subcontainer'>{login}</span>
+        <span className="login-info-subcontainer">{login}</span>
       </p>
       <p className="login-info">
         Senha
-        <span className={hide ? 'show ' : 'hide login-info-subcontainer'}>{password}</span>
-        <span className={hide ? 'hide login-info-subcontainer' : 'show'}>******</span>
+        {hide ? <span>{password}</span> : <span>******</span>}
       </p>
       <button
         className="delete-btn"

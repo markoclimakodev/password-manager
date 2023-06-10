@@ -108,15 +108,7 @@ body {
   .delete-btn {
     @apply flex items-end justify-end;
   }
-
-  .hide {
-    @apply block;
-  }
-
-  .show {
-    @apply hidden;
-  }
-
+  
   .services-register-container {
     @apply flex  items-center justify-center w-[894px] mt-4;
   }
