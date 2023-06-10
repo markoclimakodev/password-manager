@@ -36,7 +36,7 @@ export function PasswordCard({
       </p>
       <p className="login-info">
         Senha
-        {hide ? <span>{password}</span> : <span>******</span>}
+        {hide ? <span>******</span> : <span>{password}</span> }
       </p>
       <button
         className="delete-btn"
