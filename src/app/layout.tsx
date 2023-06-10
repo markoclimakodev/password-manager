@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-slate-950 min-w-full min-h-screen flex flex-col items-center gap-10 overflow-hidden ${inter.className}`}
+        className={`bg-slate-950 min-w-full min-h-screen flex flex-col items-center gap-10 overflow-auto ${inter.className}`}
       >
         {children}
       </body>
