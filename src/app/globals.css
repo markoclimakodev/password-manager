@@ -2,26 +2,161 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+@layer components {
+  .header {
+    @apply mb-16 mt-6  p-6;
+  }
+  .heading {
+    @apply text-zinc-100 text-4xl font-black leading-10 m-auto text-center;
+  }
+
+  .subheading {
+    @apply flex flex-col items-center  text-lg gap-5 text-gray-600;
+  }
+
+  .main {
+    @apply flex flex-col items-center;
+  }
+
+  .button {
+    @apply border-0 cursor-pointer text-sm font-bold py-4 px-14;
+  }
+
+  .styled-btn {
+    @apply bg-emerald-700 text-white rounded-2xl hover:brightness-90 disabled:cursor-not-allowed disabled:bg-slate-500 disabled:brightness-100;
+  }
+
+  .unstyled-btn {
+    @apply bg-transparent text-emerald-400;
+  }
+
+  .form-container {
+    @apply flex justify-between items-center p-8 bg-slate-900 w-[897px] rounded-xl;
+  }
+
+  .form {
+    @apply flex flex-col gap-5 min-w-[523px];
+  }
+
+  .label {
+    @apply text-zinc-300 flex flex-col text-sm gap-2 leading-3 w-full;
+  }
+
+  .login-container {
+    @apply flex gap-4;
+  }
+
+  .input {
+    @apply bg-slate-700 h-12 rounded-lg px-3 outline-1 outline-emerald-400 border-0 text-sm;
+  }
+
+  .required-fields {
+    @apply text-zinc-300;
+  }
+
+  .form-btn-container {
+    @apply flex justify-between;
+  }
+
+  .password-label {
+    @apply relative;
+  }
+
+  .invalid-password-check {
+    @apply text-rose-600;
+  }
+
+  .valid-password-check {
+    @apply text-emerald-400;
+  }
+
+  .password-tips-container {
+    @apply flex items-start bg-slate-950  flex-col gap-3 justify-center p-6 self-start mt-14 relative w-72 rounded-lg;
+  }
+
+  .password-tips-container {
+    @apply after:bg-transparent after:border-solid after:border-x-[20px] after:border-y-[20px] after:block after:-left-5 after:absolute after:top-[45%] z-[1] after:-mt-5 after:border-t-slate-950 after:border-r-transparent  after:border-b-transparent after:border-l-transparent;
+  }
+
+  .password-tips-container-hide {
+    @apply opacity-0;
+  }
+
+  .password-list-card {
+    @apply bg-slate-700 rounded-lg flex flex-col h-40 justify-end mt-2 p-3 transition-all ease-in-out duration-500 w-60 hover:scale-105;
+  }
+
+  .password-list-header {
+    @apply flex  items-center justify-between pb-8;
+  }
+
+  .password-list-header-subcontainer {
+    @apply flex items-center text-emerald-500 text-lg font-bold gap-1;
+  }
+
+  .login-info {
+    @apply flex justify-between text-slate-200 text-sm mb-2;
+  }
+
+  .login-info-subcontainer {
+    @apply text-white text-sm font-bold text-right;
+  }
+
+  .delete-btn {
+    @apply flex items-end justify-end;
+  }
+
+  .hide {
+    @apply block;
+  }
+
+  .show {
+    @apply hidden;
+  }
+
+  .services-register-container {
+    @apply flex  items-center justify-center w-[894px] mt-4;
+  }
+
+  .services-register-subcontainer {
+    @apply flex flex-wrap justify-start w-[894px] px-10 mb-10  gap-10;
+  }
+
+  .service-list-empty-container {
+    @apply flex justify-center mt-32 w-full;
+  }
+
+  .divider {
+    @apply mt-14 w-96;
+  }
+
+  .hide-password-container {
+    @apply flex items-center justify-end pr-4 w-[894px] mt-8;
+  }
+  .switch-container {
+    @apply   flex items-end
+  }
+
+  .switch-heading {
+    @apply text-emerald-400 mr-3
+  }
+
+  .switch {
+    @apply flex bg-slate-700 w-16 h-6 rounded-3xl relative cursor-pointer;
+  }
+
+  .switch-checkbox {
+    @apply sr-only;
+  }
+
+  .slider {
+    @apply w-6 h-4 bg-slate-300 absolute rounded-full left-1 top-1 bottom-1 transition-all duration-500;
+  }
+
+  .hide-show {
+    @apply flex items-center bg-transparent border-0 justify-center p-0 right-3 absolute top-9;
+  }
 }
